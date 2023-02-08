@@ -4,7 +4,6 @@ rm(list=ls())
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
 #source("C:/Users/apybus3/Box/Wood Lab R Functions/WoodLabFunctions.R")
-O
 if (!require("pacman")) install.packages("pacman")
 if (!require("BiocManager")) install.packages("BiocManager")
 pacman::p_load(readxl,tidyverse,rio,Seurat,data.table,R.utils) 
