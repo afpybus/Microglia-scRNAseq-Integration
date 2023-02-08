@@ -21,6 +21,8 @@ pacman::p_load_gh("pengminshi/cFIT")
 # 1 - PREP ARNESON DATA ##########
 
 # Import the data
+# data set is not included in GitHub repo due to file size limitations; download here: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?&acc=GSE101901
+# file GSE101901_DropSeqTBI.digital_expression.txt.gz, must decompress to .txt
 df_TBI_in <- import("GEO Data Sets/DropSeqTBI.digital_expression.txt") 
 genes_TBI = str_to_upper(df_TBI_in$V1)
 dir.create("Figures/1 - Prep Arneson Data",recursive = TRUE,showWarnings = FALSE)
