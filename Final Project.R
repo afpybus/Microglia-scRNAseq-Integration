@@ -166,8 +166,18 @@ FeaturePlot(TBI_SO, features = c("CTSS","CD14", "AIF1","FCRLS","TMEM119","CCR5")
 dev.off()
 
 
-# Monocyte clusters are 4 and 14
+VlnPlot(TBI_SO, features = c("GAD1","GAD2","VIP","RELN","SYNPR","SCG2"))
 
+VlnPlot(TBI_SO, features = c("IL1A","IL1B","IL13RA1","IL13RA2","IL17B","IL17D","IL2","CXCL1"))
+VlnPlot(TBI_SO, features = c("IL1R1","IL1R2","IL2RA","IL2RB","IL2RG"))
+
+TBI_N <- TBI_SO[,which(TBI_SO$seurat_clusters %in% c(3,6,9,11,16,17))]
+Idents(TBI_N) = TBI_N@meta.data$Condition
+VlnPlot(TBI_N, features = c("IL13RA1","IL13RA2"))
+
+
+# Monocyte clusters are 4 and 14
+# Neuron clusters are 3, 6, 9, 11, 16, 17
 
 
 # 2 - ANALYZE ARNESON MONOCYTES #############
